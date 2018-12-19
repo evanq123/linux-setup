@@ -68,7 +68,7 @@ Follow these steps:
    sudo make altinstall
    ```
    ```shell
-   Make Python 3.7 the default version, make aliases
+   # Make Python 3.7 the default version, make aliases
    sudo ln -s /usr/local/opt/python-3.7.0/bin/pydoc3.7 /usr/bin/pydoc3.7
    sudo ln -s /usr/local/opt/python-3.7.0/bin/python3.7 /usr/bin/python3.7
    sudo ln -s /usr/local/opt/python-3.7.0/bin/python3.7m /usr/bin/python3.7m
@@ -83,7 +83,7 @@ Follow these steps:
    ```
    ```shell
    # Verify
-   python -V
+   python3 -V
 
    # If you want to revert:
    update-alternatives --config python
