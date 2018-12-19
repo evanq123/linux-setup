@@ -3,10 +3,10 @@
 ### Set-up
 
 Follow these steps:
-1. install vim and git.
+1. install `vim` and `git`.
 2. run
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/fabriziocucci/git-bash-for-mac/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/evanq123/linux-setuo/master/install.sh)"
 source ~/.bash_profile
 ```
 
