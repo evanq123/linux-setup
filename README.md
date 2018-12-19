@@ -5,11 +5,11 @@
 Follow these steps:
 1. Install `vim` and `git`.
 2. Install `dotfiles` and `vim` packages by:
-```shell
-# untested on macos
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/evanq123/linux-setup/master/install.sh)"
-source ~/.bash_profile
-```
+   ```shell
+   # untested on macos
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/evanq123/linux-setup/master/install.sh)"
+   source ~/.bash_profile
+   ```
 
 ### Rasbian-stretch Installation
 1. After flashing rasbian-stretch a sd card, `cd volume/boot/` and `touch ssh`.
