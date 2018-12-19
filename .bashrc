@@ -1,4 +1,6 @@
 #!/bin/bash
+source ~/.git-bash.sh
+
 # Expand the history size
 export HISTFILESIZE=10000
 export HISTSIZE=500
