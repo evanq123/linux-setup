@@ -56,16 +56,8 @@ Follow these steps:
    # Add pyenv to load path as prompted by the warning.
    ```
    ```shell
-   # Compiling
-   wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz
-   tar xf Python-3.7.0.tar.xz
-   cd Python-3.7.0
-   ./configure --prefix=/usr/local/opt/python-3.7.0
-   make -j 4
-   ```
-   ```shell
-   # Install
-   sudo make altinstall
+   # Compiling/ Install
+   CONFIGURE_OPTS=--enable-optimizations pyenv install 3.7.0 -v
    ```
    ```shell
    # Make Python 3.7 the default version, make aliases
@@ -75,6 +67,7 @@ Follow these steps:
    sudo ln -s /usr/local/opt/python-3.7.0/bin/pyvenv-3.7 /usr/bin/pyvenv-3.7
    sudo ln -s /usr/local/opt/python-3.7.0/bin/pip3.7 /usr/bin/pip3.7
    alias python3='/usr/bin/python3.7'
+   pyenv global 3.7.0
    ls /usr/bin/python*
    cd ..
    sudo rm -r Python-3.7.0
@@ -84,11 +77,7 @@ Follow these steps:
    ```shell
    # Verify
    python3 -V
-
-   # If you want to revert:
-   update-alternatives --config python
    ```
-9. Install `java1.8`.
 
 
 ### Customize
