@@ -1,15 +1,14 @@
 #!/bin/bash
 set -e
 
+## .bash_profile, .bashrc
+curl -o ~/.bash_profile https://raw.githubusercontent.com/evanq13/linux-setup/master/.bash_profile
+curl -o ~/.bashrc https://raw.githubusercontent.com/evanq13/linux-setup/master/.bashrc
+
 ## Git-Bash
 curl -o ~/.git-bash.sh https://raw.githubusercontent.com/evanq123/linux-setup/master/.git-bash.sh
 curl -o ~/.git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-
-# Add newline at the end of the '.bash_profile' if it doesn't exist
-[[ $(tail -c1 ~/.bash_profile) && -f ~/.bash_profile ]]&&echo ''>> ~/.bash_profile
-
-echo "source ~/.git-bash.sh" >> ~/.bash_profile
 
 ## Vim configs
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
