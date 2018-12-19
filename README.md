@@ -50,8 +50,10 @@ Follow these steps:
 8. Install `python3`.
    ```shell
    # Install dependencies
-   sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev git unzip default-jre
+   sudo apt-get update
+   sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev
    curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+   # Add pyenv to load path as prompted by the warning.
    ```
    ```shell
    # Compiling
