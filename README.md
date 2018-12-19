@@ -13,7 +13,6 @@ Follow these steps:
 
 ### Rasbian-stretch Installation
 1. After flashing rasbian-stretch a sd card, `cd volume/boot/` and `touch ssh`.
-
    Optionally, `touch wpa_supplicant.conf` and set up network ESSID/PS:
    ```
    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -43,8 +42,17 @@ Follow these steps:
    static domain_name_servers=202.62.64.3
    8.8.8.8
    ```
-7. Install python3.
-8. Install java.
+7. Setup up `watchdog` to reboot pi when unresponsive.
+   ```shell
+   sudo apt-get install watchdog
+   sudo echo bcm2708_wdog >> /etc/modules
+   sudo cp /etc/watchdog.conf /etc/watchdog.conf.orig
+   sudo sed -i 's/^#max-load/max-load/' /etc/watchdog.conf
+   sudo reboot
+   ```
+   Test using `:(){ :|: & };:`
+8. Install python3.
+9. Install java.
 
 
 ### Customize
