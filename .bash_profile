@@ -3,4 +3,4 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
-source ~/.git-bash-for-mac.sh
+source ~/.git-bash.sh
