@@ -1,19 +1,20 @@
-# Evan's configs
+# dotfiles configurations and installation guides
 
-### Set-up
+### dotfiles/vim
 
 Follow these steps:
-1. install `vim` and `git`.
-2. run
+1. Install `vim` and `git`.
+2. Install `dotfiles` and `vim` packages by:
 ```shell
+# untested on macos
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/evanq123/linux-setup/master/install.sh)"
 source ~/.bash_profile
 ```
 
-### Rasbian-stretch
-1. after flashing rasbian stretch to sd card, navigate to volume/boot/ and do `touch ssh`
-* optionally, `touch wpa_supplicant.conf` and set up network ESSID/PS:
-```shell
+### Rasbian-stretch Installation
+1. After flashing rasbian-stretch a sd card, `cd volume/boot/` and `touch ssh`
+Optionally, `touch wpa_supplicant.conf` and set up network ESSID/PS:
+```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 network={
     ssid="YOUR_NETWORK_NAME"
@@ -21,18 +22,14 @@ network={
     key_mgmt=WPA-PSK
 }
 ```
-2. change raspbian default password from `raspberry` by entering `passwd`
-3. install `sudo apt-get install screen` and do `screen -S install_setup` to create a new screen in case of disconnects.
-2. `sudo raspi-config` to edit localisation and network options
-2. configure wifi.
+2. Change raspbian default password from `raspberry` by `passwd`.
+3. `sudo apt-get install screen` and `screen -S install_setup` to create a new screen in case of disconnects.
+4. `sudo raspi-config` to edit localization and network options
+5. Configure wifi.
 ```shell
 wpa_passphrase "testing" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf > /dev/null
 ```
-3. configure static ip.
-```shell
-sudo vi /etc/dhcpcd.conf
-```
-...type in the following to `dhcpcd.conf` then `sudo reboot`
+6. Configure static ip. Type in the following to `sudo vi /etc/dhcpcd.conf` then `sudo reboot`
 ```shell
 # Found by route -n
 interface eth0
@@ -45,8 +42,8 @@ static routers=192.168.1.1
 static domain_name_servers=202.62.64.3
 8.8.8.8
 ```
-3. install python3.
-4. install java.
+7. Install python3.
+8. Install java.
 
 
 ### Customize

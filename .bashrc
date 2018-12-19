@@ -1,4 +1,5 @@
 #!/bin/bash
+# Change bash prompt
 source ~/.git-bash.sh
 
 # Expand the history size
