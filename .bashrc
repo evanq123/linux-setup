@@ -29,4 +29,4 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 ## Aliases
 # Search command line history
-alias h="history | grep "
+alias hg="history | grep "
