@@ -2,8 +2,8 @@
 set -e
 
 ## .bash_profile, .bashrc
-curl -o ~/.bash_profile https://raw.githubusercontent.com/evanq13/linux-setup/master/.bash_profile
-curl -o ~/.bashrc https://raw.githubusercontent.com/evanq13/linux-setup/master/.bashrc
+curl -o ~/.bash_profile https://raw.githubusercontent.com/evanq123/linux-setup/master/.bash_profile
+curl -o ~/.bashrc https://raw.githubusercontent.com/evanq123/linux-setup/master/.bashrc
 
 ## Git-Bash
 curl -o ~/.git-bash.sh https://raw.githubusercontent.com/evanq123/linux-setup/master/.git-bash.sh
