@@ -34,25 +34,21 @@ Follow these steps:
    # Found by route -n
    interface eth0
    static ip_address=192.168.1.12
-
-   interface wlan0
-   static ip_address=192.168.1.13
    static routers=192.168.1.1
    # Found by cat /etc/resolv.conf
-   static domain_name_servers=202.62.64.3
-   8.8.8.8
+   static domain_name_servers=8.8.8.8
    ```
 7. Setup up `watchdog` to reboot pi when unresponsive.
    ```shell
    sudo apt-get install watchdog
-   sudo echo bcm2708_wdog >> /etc/modules
+   sudo echo bcm2708_wdog >> /etc/modules # Note, might need to do sudo -i
    sudo cp /etc/watchdog.conf /etc/watchdog.conf.orig
    sudo sed -i 's/^#max-load/max-load/' /etc/watchdog.conf
    sudo reboot
    ```
-   Test using `:(){ :|: & };:`
-8. Install python3.
-9. Install java.
+   Test using fork bomb: `:(){ :|: & };:` *Warning* will need to manually power-cycle if watchdog wasn't set up correctly.
+8. Install `python3`.
+9. Install `java1.8`.
 
 
 ### Customize
