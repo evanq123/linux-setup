@@ -81,6 +81,10 @@ Follow these steps:
 9. Install java8.
    ``` shell
    sudo apt-get install dirmngr
+   # Reinstall certs
+   sudo apt-get remove openjdk-8-jre-headless openjdk-8-jre
+   sudo apt-get install ca-certificates-java
+   sudo apt-get install openjdk-8-jre-headless
    # Remove old java
    sudo apt-get remove --purge oracle-java8-jdk
    echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | sudo tee /etc/apt/sources.list.d/webupd8team-java.list
@@ -91,8 +95,9 @@ Follow these steps:
    # Verify
    java -version
 
-   # Copy key from first column to command i.e.,
-   update-java-alternatives -s java-8-oracle
+   # Set Environmental variables
+   sudo apt-get install oracle-java8-set-default
+   source /etc/profile
    ```
 
 ### Customize
