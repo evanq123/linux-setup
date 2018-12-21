@@ -17,3 +17,6 @@ curl -o ~/.vimrc https://raw.githubusercontent.com/evanq123/linux-setup/master/.
 cd ~/.vim/bundle && \
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 cd ~
+
+## Screen configs
+curl -o ~/.bashrc https://raw.githubusercontent.com/evanq123/linux-setup/master/.screenrc

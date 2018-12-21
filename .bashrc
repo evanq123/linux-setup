@@ -2,6 +2,9 @@
 # Change bash prompt
 source ~/.git-bash.sh
 
+# PATH
+export PATH=$PATH:/$HOME/.local/bin:$HOME:bin
+
 # Expand the history size
 export HISTFILESIZE=10000
 export HISTSIZE=500

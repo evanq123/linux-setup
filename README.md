@@ -3,7 +3,7 @@
 ### dotfiles/vim
 
 Follow these steps:
-1. Install `vim` and `git`.
+1. Install `vim`, `screen`, and `git`.
 2. Install `dotfiles` and `vim` packages by:
    ```shell
    # untested on macos
@@ -84,7 +84,7 @@ Follow these steps:
    # Reinstall certs
    sudo apt-get remove openjdk-8-jre-headless openjdk-8-jre
    sudo apt-get install ca-certificates-java
-   sudo apt-get install openjdk-8-jre-headless
+   sudo apt-get install openjdk-8-jre
    # Remove old java
    sudo apt-get remove --purge oracle-java8-jdk
    echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | sudo tee /etc/apt/sources.list.d/webupd8team-java.list
