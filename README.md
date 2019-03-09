@@ -10,6 +10,12 @@ Follow these steps:
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/evanq123/linux-setup/master/install.sh)"
    source ~/.bash_profile
    ```
+### ArchARM Installation
+1. Change arch default password for `root` and `alarm` from `root` and `alarm` using `passwd`
+2. `pacman-key --init` from `su` then `pacman-key --populate archlinuxarm`
+3. `pacman -S sudo`, Add users to sudoer file using `visudo`, and `exit` root.
+4. Upgrade/update using `sudo pacman -Syy` and `sudo pacman -Su` once a week.
+
 
 ### Rasbian-stretch Installation
 1. After flashing rasbian-stretch a sd card, `cd volume/boot/` and `touch ssh`.
