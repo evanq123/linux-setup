@@ -15,7 +15,13 @@ Follow these steps:
 2. `pacman-key --init` from `su` then `pacman-key --populate archlinuxarm`
 3. `pacman -S sudo`, Add users to sudoer file using `visudo`, and `exit` root.
 4. Upgrade/update using `sudo pacman -Syy` and `sudo pacman -Su` once a week.
-5. Install python 3.7.0+ pip9.0 git and Java RE 8: `sudo pacman -Syu python-pip git base-devel jre8-openjdk`
+5. Install python 3.7.0+ pip9.0 git and Java RE 8 using `sudo pacman -Syu python-pip git base-devel jre8-openjdk`
+
+6. Install pyenv for python3.7:
+```shell
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+CONFIGURE_OPTS=--enable-optimizations pyenv install 3.7.2 -v
+```
 
 ### Rasbian-stretch Installation
 1. After flashing rasbian-stretch a sd card, `cd volume/boot/` and `touch ssh`.
