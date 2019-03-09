@@ -20,6 +20,7 @@ Follow these steps:
 ```shell
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 CONFIGURE_OPTS=--enable-optimizations pyenv install 3.7.2 -v
+pyenv global 3.7.2
 ```
 
 ### Rasbian-stretch Installation
