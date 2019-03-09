@@ -14,9 +14,10 @@ Follow these steps:
 1. Change arch default password for `root` and `alarm` from `root` and `alarm` using `passwd`
 2. `pacman-key --init` from `su` then `pacman-key --populate archlinuxarm`
 3. `pacman -S sudo`, Add users to sudoer file using `visudo`, and `exit` root.
-4. Upgrade/update using `sudo pacman -Syy` and `sudo pacman -Su` once a week.
-5. Install python 3.7.0+ pip9.0 git and Java RE 8 using `sudo pacman -Syu python-pip git base-devel jre8-openjdk`
-6. Install pyenv for python3.7:
+4. `sudo pacman -S screen` and `screen -S install_setup` to create a new screen in case of disconnects.
+5. Upgrade/update using `sudo pacman -Syy` and `sudo pacman -Su` once a week.
+6. Install python 3.7.0+ pip9.0 git and Java RE 8 using `sudo pacman -Syu python-pip git base-devel jre8-openjdk`
+7. Install pyenv for python3.7:
 ```shell
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 CONFIGURE_OPTS=--enable-optimizations pyenv install 3.7.2 -v
